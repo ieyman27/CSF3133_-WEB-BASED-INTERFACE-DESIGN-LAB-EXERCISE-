@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Responsive Webpage</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f9fc;
+        }
+
+        header {
+            background-color: #cc99ff;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            background:#9966ff;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            background: #004c91;
+            text-decoration: underline;
+            border-radius: 4px;
+        }
+
+        nav ul li a:active {
+            color: yellow;
+            text-decoration: overline;
+        }
+
+        nav ul li a:visited {
+            color: #ccc;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            text-decoration: underline;
+            color: #004c91;
+        }
+
+        article {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+            a:link {color: #FF0000;} /* unvisited link */
+            a:visited {color: #00FF00;} /* visited link */
+            a:hover {color: #FF00FF;} /* mouse over link */
+            a:active {color:#0000FF;} /* selected link */
+        
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .gender-group {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* spacing between buttons and labels */
+        }
+        .Resepi-group {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* spacing between buttons and labels */
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #004c91;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00ff00;
+        }
+
+        footer {
+            background: #cc99ff;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+            video {
+                width: 400%;
+                height: 300%;
+            }
+            
+           
+            
+            
+            body {
+                   background-color: #eef2f7;
+             }
+
+            h1 {
+             text-decoration: overline underline;
+             letter-spacing: 2px;
+            }
+
+            a {
+             transition: all 0.3s ease;
+            }
+             .star-rating {
+                direction: rtl; 
+                display: inline-flex;
+                 font-size: 30px;
+             }
+
+            .star-rating input {
+                display: none;
+            }
+
+            .star-rating label {
+                color: #ccc;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+
+  
+            .star-rating label:hover,
+            .star-rating label:hover ~ label {
+            color: gold;
+            }
+
+  
+             .checked {
+                 color: yellow;
+            }
+  }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RESEPI MASAKAN</h1>
+        <p>Pelbagai Masakan Dari Seluruh Dunia </p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <article>
+            <h2>About This Page</h2>
+            <p>Halaman ini dibuat untuk memperkenalkan berbagai jenis masakan dari seluruh dunia, mulai dari resep tradisional hingga kreasi modern. Di sini kamu dapat menemukan inspirasi memasak, tips dapur, serta kisah di balik setiap hidangan. Tujuannya adalah untuk mengajak semua orang menikmati seni memasak dan mengenal kekayaan rasa dari berbagai budaya..</p>
+        </article>
+    </section>
+
+    <section id="media">
+        <article>
+            <h2>Embedded Video</h2>
+            <p>Watch this short demo video below:</p>
+            <video width ="400" height="300" controls>
+                <source src="ieymanchannel.mp4" type="video/mp4">
+                Sorry, your browser does not support the video tag.
+            </video>
+            <p class="caption">VIDEO 1: RESEPI SPAGHETTI AGLIO OLIO</p>
+            <p><b><a href="https://youtu.be/c1NSPMdVEyw?si=RIg7vOVvwd5ipmFI" target="_blank"> Spaghetti Aglio Olio</a></b></p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <article>
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+              <div class="gender-group">
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+              </div>
+ 
+    <div class ="Resepi-group">
+    <label>Resepi Kegemaran Anda:</label><br>
+    
+    <input type="checkbox" id="Spaghetti Aglio Olio" name="Resepi" value="Spaghetti Aglio Olio">
+    <label for="Spaghetti Aglio Olio">Spaghetti Aglio Olio</label><br>
+    
+    <input type="checkbox" id="Dumpling Ayam dengan Sichuan Sauce" name="Resepi" value="Dumpling Ayam dengan Sichuan Sauce">
+    <label for="Dumpling Ayam dengan Sichuan Sauce">Dumpling Ayam dengan Sichuan Sauce</label><br>
+    
+    <input type="checkbox" id="Nasi Lemak Ayam Berempah" name="Resepi" value="Nasi Lemak Ayam Berempah">
+    <label for="Nasi Lemak Ayam Berempah">Nasi Lemak Ayam Berempah</label><br>
+</div>
+                
+                <h3>Star Rating</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span> <br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ieyman Web Lab. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
